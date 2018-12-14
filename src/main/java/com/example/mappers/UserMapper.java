@@ -8,15 +8,15 @@ import java.util.List;
 @Repository
 public interface UserMapper {
 
-    User getById(String user_id);
+    User getById(String userId);
 
-    public boolean insert(String name);
+    public boolean insert(String userName);
 
     public List<User> getUsers();
 
     public boolean updateUser(User user);
 
-    public boolean deleteUser(int id);
+    public boolean deleteUser(String userId);
 
     public boolean deleteAllUsers();
 }

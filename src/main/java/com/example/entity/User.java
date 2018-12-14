@@ -2,43 +2,42 @@ package com.example.entity;
 
 
 public class User {
-    private String user_name;
-    private String user_id;
-    private String user_job;
-    private int user_level;
+    private String userName;
+    private String userId;
+    private String userJob;
+    private int userLevel;
 
-    public String getUser_name() {
-        return user_name;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public String getUser_id() {
-        return user_id;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUser_id(String user_id) {
-        this.user_id = user_id;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
-    public String getUser_job() {
-        return user_job;
+    public String getUserJob() {
+        return userJob;
     }
 
-    public void setUser_job(String user_job) {
-        this.user_job = user_job;
+    public void setUserJob(String userJob) {
+        this.userJob = userJob;
     }
 
-    public int getUser_level() {
-        return user_level;
+    public int getUserLevel() {
+        return userLevel;
     }
 
-    public void setUser_level(int user_level) {
-        this.user_level = user_level;
+    public void setUserLevel(int userLevel) {
+        this.userLevel = userLevel;
     }
-
 
     public User() {
 

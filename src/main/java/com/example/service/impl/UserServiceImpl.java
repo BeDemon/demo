@@ -12,7 +12,7 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     @Override
-    public User getById(String user_id) {
-        return userMapper.getById(user_id);
+    public User getById(String userId) {
+        return userMapper.getById(userId);
     }
 }

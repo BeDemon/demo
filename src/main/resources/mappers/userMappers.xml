@@ -6,25 +6,25 @@
     <!--id对应接口中的方法，名字要一样，parameterType是方法的参数类型，
     resultType是查询返回的类型，需要注意的是，这里的SQL语句后面不能加分号，变量不能加引号-->
     <select id="getById" parameterType="String" resultType="User">
-        select * from user_info where user_id = #{user_id}
+        select * from user_info where user_id = #{userId}
     </select>
 
     <insert id="insert" parameterType="string">
-        insert into user(name) values(#{name})
+        insert into user_info(userName) values(#{userName})
     </insert>
 
     <select id="getUsers" resultType="com.example.entity.User">
-        select * from user order by #{id}
+        select * from user_info order by #{userId}
     </select>
 
     <update id="updateUser" parameterType="com.example.entity.User">
-        update user set name=#{name} where id = #{id}
+        update user_info set name=#{userName} where userId = #{userId}
     </update>
     <delete id="deleteAllUsers">
-        delete from user
+        delete from user_info
     </delete>
-    <delete id="deleteUser" parameterType="int">
-        delete from user where id = #{id}
+    <delete id="deleteUser" parameterType="String">
+        delete from user_info where userId = #{userId}
     </delete>
 
 </mapper>
