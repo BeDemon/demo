@@ -7,9 +7,9 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@MapperScan("com.example.Mapper")
+@MapperScan(basePackages = "com.example.mappers")
 @EnableCaching
-@ComponentScan(basePackages = {"com.example.service", "com.example.Mapper", "com.example.controller"})
+@ComponentScan(basePackages = {"com.example.service", "com.example.mappers", "com.example.controller"})
 public class DemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
