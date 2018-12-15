@@ -9,22 +9,28 @@
         select * from user_info where user_id = #{userId}
     </select>
 
-    <insert id="insert" parameterType="string">
-        insert into user_info(userName) values(#{userName})
+    <insert id="insertUser">
+        insert into user_info(user_id, user_name, user_job, user_level) values(#{userId}, #{userName}, #{userJob}, #{userLevel})
     </insert>
 
-    <select id="getUsers" resultType="com.example.entity.User">
-        select * from user_info order by #{userId}
+    <select id="getUsersByOrder" resultType="com.example.entity.User">
+        select * from user_info order by user_id
+    </select>
+
+    <select id="getUsersByLevel" parameterType="int" resultType="User">
+        select * from user_info where user_level = #{userLevel}
     </select>
 
     <update id="updateUser" parameterType="com.example.entity.User">
-        update user_info set name=#{userName} where userId = #{userId}
+        update user_info set user_id=#{userId}, user_name=#{userName}, user_job=#{userJob}, user_level=#{userLevel} where user_id = #{userId}
     </update>
+
     <delete id="deleteAllUsers">
         delete from user_info
     </delete>
+
     <delete id="deleteUser" parameterType="String">
-        delete from user_info where userId = #{userId}
+        delete from user_info where user_id = #{userId}
     </delete>
 
 </mapper>

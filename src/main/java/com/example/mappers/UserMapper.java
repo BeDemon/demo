@@ -10,13 +10,15 @@ public interface UserMapper {
 
     User getById(String userId);
 
-    public boolean insert(String userName);
+    public int insertUser(User user);
 
-    public List<User> getUsers();
+    public List<User> getUsersByOrder();
 
-    public boolean updateUser(User user);
+    public List<User> getUsersByLevel(int userLevel);
 
-    public boolean deleteUser(String userId);
+    public int updateUser(User user);
 
-    public boolean deleteAllUsers();
+    public int deleteUser(String userId);
+
+    public int deleteAllUsers();
 }
